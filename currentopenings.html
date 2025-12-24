@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Current IT job openings at Career Build IT Academy. Find fresher IT jobs, software development jobs, cloud engineer positions, cyber security jobs, IT support roles. Apply now for job opportunities in Bangalore, Hyderabad, Chennai, Pune. Updated daily.">
+    <meta name="keywords" content="current IT openings, IT jobs for freshers, software job openings, job openings by course, IT job openings, fresher IT jobs, software jobs for students, IT support jobs, cloud engineer openings, cyber security jobs, frontend developer jobs, full stack jobs, testing jobs, network security jobs">
+    <meta name="author" content="Career Build IT Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Current IT Job Openings - Freshers & Experienced | Career Build IT Academy">
+    <meta property="og:description" content="Find latest IT job openings. Software Development, Cloud Computing, Cyber Security, IT Support jobs. Updated regularly. Apply now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.careerbuilditacademy.com/current-openings">
+    <meta property="og:image" content="https://www.careerbuilditacademy.com/images/job-openings-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Current IT Job Openings - Apply Now">
+    <meta name="twitter:description" content="Latest IT job openings for freshers and experienced. Software, Cloud, Security, IT Support jobs.">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.careerbuilditacademy.com/current-openings">
+    
+    <!-- Local Business SEO Meta Tags -->
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <meta name="language" content="English">
+    <meta name="coverage" content="India">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="3 days">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Career Build IT Academy"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        }
+      },
+      "employmentType": ["FULL_TIME", "INTERN", "CONTRACT"],
+      "occupationalCategory": "IT Jobs"
+    }
+    </script>
+    
+    <title>Current IT Job Openings - Freshers & Experienced | Career Build IT Academy</title>
+    
+    <style>
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        #header {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #header:empty {
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Search & Filter Section */
+        .search-filter-section {
+            background: white;
+            padding: 30px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .search-filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+        
+        .filter-box {
+            min-width: 250px;
+        }
+        
+        .filter-box select {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-box select:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .hero h1 span {
+            color: #ff6b35;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+        
+        /* Openings Section */
+        .openings-section {
+            padding: 60px 20px;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        h2 span {
+            color: #ff6b35;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        /* Job Cards Grid */
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+            border-color: #ff6b35;
+        }
+        
+        .job-title {
+            font-size: 1.5em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .job-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .job-meta-item strong {
+            color: #333;
+            min-width: 120px;
+        }
+        
+        .job-skills {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .job-skills strong {
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .job-skills span {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .job-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-apply {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            flex: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .btn-apply:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-details {
+            background: transparent;
+            color: #ff6b35;
+            padding: 12px 30px;
+            border: 2px solid #ff6b35;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-details:hover {
+            background: #ff6b35;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Course Badge */
+        .course-badge {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.1);
+            color: #ff6b35;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Apply Process Section */
+        .apply-process {
+            background: white;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #ff6b35;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .process-step p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .apply-message {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 10px;
+            color: #ff6b35;
+            font-size: 1.2em;
+            font-weight: 600;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .no-results h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .search-filter-container {
+                flex-direction: column;
+            }
+            
+            .search-box {
+                min-width: 100%;
+            }
+            
+            .filter-box {
+                width: 100%;
+            }
+            
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .job-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-apply, .btn-details {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .job-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Current <span>Job Openings</span></h1>
+            <p>Find the right opportunity for your IT career</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="search-filter-section">
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search jobs by role, skill, or keyword…">
+            </div>
+            <div class="filter-box">
+                <select id="courseFilter">
+                    <option value="all">All Courses</option>
+                    <option value="frontend">Frontend Development</option>
+                    <option value="fullstack">Full Stack Development</option>
+                    <option value="python-java">Python / Java Development</option>
+                    <option value="testing">Software Testing</option>
+                    <option value="it-support-1">IT Support - Level 1</option>
+                    <option value="it-support-2">IT Support - Level 2</option>
+                    <option value="it-support-3">IT Support - Level 3</option>
+                    <option value="cloud">Cloud Computing</option>
+                    <option value="network-security">Network Security / Firewall</option>
+                    <option value="cyber-security">Cyber Security</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Openings Section -->
+    <section class="openings-section">
+        <div class="container">
+            <h2>Available <span>Job Openings</span></h2>
+            <p class="section-subtitle">Jobs are updated regularly based on industry demand.</p>
+            
+            <div class="jobs-grid" id="jobsGrid">
+                
+                <!-- Job Card 1 -->
+                <div class="job-card" data-course="frontend" data-keywords="frontend developer html css javascript react ui">
+                    <div class="course-badge">Frontend Development</div>
+                    <h3 class="job-title">Frontend Developer – Fresher</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>IT Services</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>Fresher / 0–1 Year</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Bengaluru / Remote</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>HTML, CSS, JavaScript, React</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card" data-course="it-support-1" data-keywords="it support engineer hardware networking email support level 1">
+                    <div class="course-badge">IT Support</div>
+                    <h3 class="job-title">IT Support Engineer – Level 1</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>MNC</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>Fresher / 0–1 Year</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Chennai</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Hardware, Networking, Email Support, RMM Tools</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card" data-course="cloud" data-keywords="cloud support engineer aws azure linux devops">
+                    <div class="course-badge">Cloud Computing</div>
+                    <h3 class="job-title">Cloud Support Engineer</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>Product Company</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>0–2 Years</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Hyderabad</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>AWS / Azure Basics, Linux, Cloud Infrastructure</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card" data-course="testing" data-keywords="software testing trainee manual testing test cases qa">
+                    <div class="course-badge">Software Testing</div>
+                    <h3 class="job-title">Software Testing Trainee</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>IT Services</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>Fresher</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Pune</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Internship / Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Manual Testing, Test Cases, Bug Reporting</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 5 -->
+                <div class="job-card" data-course="fullstack" data-keywords="full stack developer mern mean nodejs react angular mongodb">
+                    <div class="course-badge">Full Stack Development</div>
+                    <h3 class="job-title">Full Stack Developer</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>Startup</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>0–2 Years</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Bengaluru / Hybrid</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>React, Node.js, MongoDB, REST APIs</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 6 -->
+                <div class="job-card" data-course="python-java" data-keywords="python developer java developer backend programming django spring">
+                    <div class="course-badge">Python / Java Development</div>
+                    <h3 class="job-title">Python Developer</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>IT Services</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>Fresher / 0–1 Year</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Chennai / Remote</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Python, Django/Flask, Database, APIs</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 7 -->
+                <div class="job-card" data-course="cyber-security" data-keywords="cyber security analyst soc security monitoring threat detection">
+                    <div class="course-badge">Cyber Security</div>
+                    <h3 class="job-title">Cyber Security Analyst</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>MNC</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>1–3 Years</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Bengaluru</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Security Fundamentals, SOC, Threat Monitoring</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 8 -->
+                <div class="job-card" data-course="network-security" data-keywords="network security engineer firewall palo alto fortinet cisco">
+                    <div class="course-badge">Network Security</div>
+                    <h3 class="job-title">Network Security Engineer</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>Product Company</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>2–4 Years</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Hyderabad</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Firewall, Palo Alto, Fortinet, VPN</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 9 -->
+                <div class="job-card" data-course="it-support-2" data-keywords="it professional server admin vpn level 2 windows linux">
+                    <div class="course-badge">IT Support - Level 2</div>
+                    <h3 class="job-title">IT Professional – Level 2</h3>
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <strong>Company Type:</strong>
+                            <span>MNC</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Experience:</strong>
+                            <span>1–2 Years</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Location:</strong>
+                            <span>Pune</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <strong>Employment Type:</strong>
+                            <span>Full-Time</span>
+                        </div>
+                    </div>
+                    <div class="job-skills">
+                        <strong>Skills Required:</strong>
+                        <span>Server Admin, VPN, Active Directory, Advanced Support</span>
+                    </div>
+                    <div class="job-buttons">
+                        <a href="contactform.html" class="btn-apply">Apply Now</a>
+                        <a href="#details" class="btn-details">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <h3>No jobs found</h3>
+                <p>Try adjusting your search or filter to find more opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Process Section -->
+    <section class="apply-process">
+        <div class="container">
+            <h2>How to <span>Apply</span></h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Search or Filter</h3>
+                    <p>Find jobs by course or search by keywords</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Click Apply Now</h3>
+                    <p>Choose the job that matches your skills</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Submit Details</h3>
+                    <p>Provide basic information and upload resume</p>
+                </div>
+            </div>
+            
+            <div class="apply-message">
+                No complex process. Apply in minutes.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

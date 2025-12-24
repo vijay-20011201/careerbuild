@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Developer Course - 3 months intensive training with hands-on experience in HTML, CSS, JavaScript & React. Real-time projects and career-focused training at Career Build IT Academy.">
+    <meta name="keywords" content="frontend developer course, frontend development training, web development course, HTML CSS JavaScript course, React training, frontend developer jobs, hands-on frontend training">
+    <meta name="author" content="Career Build IT Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Frontend Developer Course – Build Real-World Web Applications">
+    <meta property="og:description" content="3 months intensive frontend development training with hands-on projects. Learn HTML, CSS, JavaScript & React.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.careerbuilditacademy.com/frontend-developer-course">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.careerbuilditacademy.com/frontend-developer-course">
+    
+    <title>Frontend Developer Course – Build Real-World Web Applications | Career Build IT Academy</title>
+    
+    <style>
+       html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+#header {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove any spacing before hero section */
+.hero-section {
+    margin-top: 0 !important;
+    padding-top: 0;
+}
+
+.main-header {
+    margin: 0 !important;
+}
+/* Prevent white flash before header loads */
+#header:empty {
+    display: none;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a1a2e;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-light {
+            background: #ffffff;
+        }
+        
+        .section-gray {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            margin: 20px auto 0;
+        }
+        
+        /* Why Frontend Section */
+        .why-frontend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Mobile responsiveness (optional but recommended) */
+@media (max-width: 768px) {
+    .why-frontend-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+}
+
+.why-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+}
+
+        
+        .why-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .why-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Course Overview */
+.course-modules {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Responsive fallback (recommended) */
+@media (max-width: 768px) {
+    .course-modules {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
+
+.module-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b35;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+        .module-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .module-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .note-box {
+            background: #fff4e6;
+            border-left: 4px solid #ff6b35;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .note-box strong {
+            color: #ff6b35;
+        }
+        
+        /* Projects Section */
+        .projects-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .project-item {
+            background: #1a1a2e;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            background: #ff6b35;
+            transform: scale(1.05);
+        }
+        
+        .highlight-text {
+            background: #fff4e6;
+            border-left: 4px solid #ff6b35;
+            padding: 25px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #1a1a2e;
+            border-radius: 5px;
+        }
+        
+        /* Eligibility Section */
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .eligibility-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .eligibility-box h3 {
+            color: #ff6b35;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .eligibility-box ul {
+            list-style: none;
+        }
+        
+        .eligibility-box li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+        
+        .eligibility-box li:last-child {
+            border-bottom: none;
+        }
+        
+        .eligibility-box li::before {
+            content: '✓';
+            color: #ff6b35;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Why Academy Section */
+       .why-academy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-academy-grid > :nth-last-child(2),
+.why-academy-grid > :nth-last-child(1) {
+    grid-column: span 1;
+    justify-self: center;
+    width: 70%;
+}
+
+        
+        .academy-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .academy-icon {
+            font-size: 3em;
+            color: #ff6b35;
+            margin-bottom: 20px;
+        }
+        
+        .academy-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .academy-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Frontend Developer Course – <br> Build Real-World Web Applications</h1>
+            <p class="hero-subtitle">3 Months intensive training with hands-on experience and real-time projects.</p>
+            
+            <div class="hero-tags">
+                <span class="tag">HTML • CSS • JavaScript • React</span>
+                <span class="tag">Practical Learning</span>
+                <span class="tag">Real-Time Projects</span>
+                <span class="tag">Career-Focused Training</span>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="contactform.html" class="btn btn-primary">Enquire Now</a>
+                <a href="demoform.html" class="btn btn-secondary">Book Free Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Frontend Development -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Why Choose Frontend Development as a Career?</h2>
+            
+            <div class="why-frontend-grid">
+                <div class="why-card">
+                    <h3>High Demand</h3>
+                    <p>Frontend developer jobs are in high demand across the IT industry with excellent career growth.</p>
+                </div>
+                
+                <div class="why-card">
+                    <h3>Creative + Technical</h3>
+                    <p>Perfect blend of creativity and technical skills, building visual and interactive experiences.</p>
+                </div>
+                
+                <div class="why-card">
+                    <h3>Diverse Opportunities</h3>
+                    <p>Work opportunities in startups, enterprises, and agencies across multiple industries.</p>
+                </div>
+                
+                <div class="why-card">
+                    <h3>Full Stack Foundation</h3>
+                    <p>Strong foundation for advancing into full stack development and senior technical roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 class="section-title">What You Will Learn in This Course</h2>
+            
+            <div class="course-modules">
+                <div class="module-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Master structure and responsive design. Build mobile-friendly, professional layouts from scratch.</p>
+                </div>
+                
+                <div class="module-card">
+                    <h3>JavaScript</h3>
+                    <p>Learn logic, interactivity, and DOM manipulation. Make your websites dynamic and functional.</p>
+                </div>
+                
+                <div class="module-card">
+                    <h3>React</h3>
+                    <p>Component-based UI development. Build modern, scalable single-page applications.</p>
+                </div>
+                
+                <div class="module-card">
+                    <h3>Project Work</h3>
+                    <p>Build real web applications. Apply your skills to industry-style development projects.</p>
+                </div>
+            </div>
+            
+            <div class="note-box">
+                <strong>Important:</strong> Our focus is on hands-on practice, not theory-only teaching. You will code, build, and learn by doing.
+            </div>
+        </div>
+    </section>
+
+    <!-- Hands-On Projects -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Hands-On Training with Real-Time Projects</h2>
+            
+            <div class="projects-content">
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <h3>Responsive Websites</h3>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>Interactive Web Apps</h3>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>React Frontend Projects</h3>
+                    </div>
+                    
+                    <div class="project-item">
+                        <h3>Industry Workflow</h3>
+                    </div>
+                </div>
+                
+                <div class="highlight-text">
+                    "You will build things, not just watch videos."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility & Course Details -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 class="section-title">Eligibility & Course Details</h2>
+            
+            <div class="eligibility-grid">
+                <div class="eligibility-box">
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>Any Degree</li>
+                        <li>B.E / B.Tech</li>
+                        <li>Any Graduation or Above</li>
+                    </ul>
+                </div>
+                
+                <div class="eligibility-box">
+                    <h3>Course Duration</h3>
+                    <ul>
+                        <li>3 Months (Intensive & Structured)</li>
+                        <li>Online / Offline Options</li>
+                        <li>Practical-focused sessions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Career Build IT Academy -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Why Learn Frontend Development at Career Build IT Academy</h2>
+            
+            <div class="why-academy-grid">
+                <div class="academy-card">
+                    <div class="academy-icon">📚</div>
+                    <h3>Industry-Aligned Curriculum</h3>
+                    <p>Learn what employers actually need in frontend developers.</p>
+                </div>
+                
+                <div class="academy-card">
+                    <div class="academy-icon">💻</div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Code from day one with practical, project-based training.</p>
+                </div>
+                
+                <div class="academy-card">
+                    <div class="academy-icon">🚀</div>
+                    <h3>Real-Time Projects</h3>
+                    <p>Build portfolio-worthy projects with industry workflows.</p>
+                </div>
+                
+                <div class="academy-card">
+                    <div class="academy-icon">🎯</div>
+                    <h3>Career-Focused Training</h3>
+                    <p>Not just training—a complete career-building platform.</p>
+                </div>
+                
+                <div class="academy-card">
+                    <div class="academy-icon">🤝</div>
+                    <h3>Job Readiness Guidance</h3>
+                    <p>Prepare for interviews and build job-ready skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="enquire">
+        <div class="container">
+            <h2>Start Your Career as a Frontend Developer</h2>
+            <p>Join our 3-month hands-on training program and build real-world frontend skills.</p>
+            
+            <div class="cta-buttons">
+                <a href="contactform.html" class="btn btn-secondary">Enquire Now</a>
+                <a href="demoform.html" class="btn btn-secondary">Book Free Demo Class</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load external HTML files
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load ' + filePath);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    
+                    // Re-execute scripts if any (for mobile menu functionality)
+                    const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerHTML);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Load header, home page content, and footer on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadHTML('header', 'header.html');
+            loadHTML('main-content', 'home.html');
+            loadHTML('footer', 'footer.html');
+        });
+
+        // Function to load different pages
+        function loadPage(page) {
+            loadHTML('main-content', page + '.html');
+        }
+        </script>
+</body>
+</html>
