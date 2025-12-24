@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Sitemap
+Sitemap: https://careerbuild.in/sitemap.xml
