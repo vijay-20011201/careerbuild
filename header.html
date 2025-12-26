@@ -577,6 +577,42 @@
                 text-align: center;
             }
         }
+        /* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background: #20ba5a;
+    transform: scale(1.08);
+}
+
+/* Mobile friendly spacing */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -697,6 +733,14 @@
 
             <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
         </div>
+        <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919008129489?text=Hi%20I%20am%20interested%20in%20a%20Training"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
     </header>
 
     <script>
