@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Your Career - Career Build IT Academy</title>
+    <style>
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        #header {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #header:empty {
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-highlight {
+            background: rgba(255, 107, 53, 0.2);
+            border-left: 4px solid #ff6b35;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-highlight p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        /* Career Transition Paths */
+        .transition-section {
+            padding: 70px 0;
+            background: #f8f8f8;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 44px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .transition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .transition-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .transition-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-color: #ff6b35;
+        }
+
+        .transition-path {
+            font-size: 20px;
+            color: #1a1a2e;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .arrow-icon {
+            color: #ff6b35;
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .salary-jump {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* How It Works */
+        .how-it-works-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f8f8;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .step-card::after {
+            content: '→';
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .step-card:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step-card h3 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Popular Upskill Tracks */
+        .upskill-tracks-section {
+            padding: 70px 0;
+            background: #f8f8f8;
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .track-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .track-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-color: #ff6b35;
+        }
+
+        .track-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .track-transition {
+            font-size: 22px;
+            color: #1a1a2e;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .track-arrow {
+            color: #ff6b35;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+        .track-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .meta-item {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .salary-comparison {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .salary-before-after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+
+        .skills-list {
+            margin: 20px 0;
+        }
+
+        .skills-list h4 {
+            font-size: 18px;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .skills-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: #666;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .track-cta {
+            width: 100%;
+            padding: 16px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .track-cta:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 35px 25px;
+            background: #f8f8f8;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Success Stories */
+        .success-stories-section {
+            padding: 70px 0;
+            background: #f8f8f8;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .story-avatar {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .story-info h4 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .story-info p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .story-journey {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .journey-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .journey-path {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .story-salary {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .story-salary p {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+
+        .story-quote {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        /* Flexible Learning Options */
+        .learning-options-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .option-card {
+            background: #f8f8f8;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .option-card:hover {
+            background: white;
+            border-color: #ff6b35;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .option-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .option-card h3 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .option-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Support Section */
+        .support-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%);
+            color: white;
+        }
+
+        .support-section .section-title {
+            color: white;
+        }
+
+        .support-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .support-card:hover {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: #ff6b35;
+            transform: translateY(-5px);
+        }
+
+        .support-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .support-card p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Assessment Form Section */
+        .assessment-section {
+            padding: 70px 0;
+            background: #f8f8f8;
+        }
+
+        .assessment-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-section h1 {
+                font-size: 40px;
+            }
+
+            .hero-section p {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .steps-container,
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step-card::after {
+                display: none;
+            }
+
+            .tracks-grid,
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .support-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .steps-container,
+            .options-grid,
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .assessment-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Upskill & Advance Your IT Career</h1>
+            <p>For working professionals ready to level up</p>
+            <div class="hero-highlight">
+                <p>Already working in IT? Ready for the next step? We help you transition to better roles with targeted training and complete job support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Transition Paths -->
+    <section class="transition-section">
+        <div class="container">
+            <h2 class="section-title">Popular Career Transition Paths</h2>
+            <p class="section-subtitle">Choose your journey and grow your IT career</p>
+            
+            <div class="transition-grid">
+                <div class="transition-card">
+                    <div class="transition-path">
+                        IT Support L1
+                        <span class="arrow-icon">↓</span>
+                        Software Developer
+                    </div>
+                    <div class="salary-jump">₹20k → ₹35k+</div>
+                </div>
+
+                <div class="transition-card">
+                    <div class="transition-path">
+                        IT Support L1
+                        <span class="arrow-icon">↓</span>
+                        IT Support L2
+                    </div>
+                    <div class="salary-jump">₹18k → ₹25k+</div>
+                </div>
+
+                <div class="transition-card">
+                    <div class="transition-path">
+                        Frontend Dev
+                        <span class="arrow-icon">↓</span>
+                        Full Stack Dev
+                    </div>
+                    <div class="salary-jump">₹22k → ₹40k+</div>
+                </div>
+
+                <div class="transition-card">
+                    <div class="transition-path">
+                        IT Support
+                        <span class="arrow-icon">↓</span>
+                        Cloud/DevOps
+                    </div>
+                    <div class="salary-jump">₹20k → ₹45k+</div>
+                </div>
+
+                <div class="transition-card">
+                    <div class="transition-path">
+                        Any IT Role
+                        <span class="arrow-icon">↓</span>
+                        Cyber Security
+                    </div>
+                    <div class="salary-jump">₹25k → ₹50k+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">How Upskilling Works</h2>
+            <p class="section-subtitle">Your journey to career advancement in 4 simple steps</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Tell Us Your Current Role</h3>
+                    <p>Share your experience and current position</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Choose Target Role</h3>
+                    <p>Select where you want to reach next</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Get Training Plan</h3>
+                    <p>Receive personalized learning roadmap</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Switch/Upgrade</h3>
+                    <p>Land your new role with our support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Upskill Tracks -->
+    <section class="upskill-tracks-section">
+        <div class="container">
+            <h2 class="section-title">Popular Upskill Tracks</h2>
+            <p class="section-subtitle">Structured programs designed for working professionals</p>
+            
+            <div class="tracks-grid">
+                <!-- Track 1: IT Support to Software Dev -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <div class="track-transition">
+                            IT Support <span class="track-arrow">→</span> Software Dev
+                        </div>
+                    </div>
+
+                    <div class="track-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">6 Months</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Mode</div>
+                            <div class="meta-value">Weekend</div>
+                        </div>
+                    </div>
+
+                    <div class="salary-comparison">
+                        <div class="salary-before-after">
+                            ₹20,000 <span class="track-arrow">→</span> ₹35,000+
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Skills You'll Gain:</h4>
+                        <ul>
+                            <li>Full Stack Development</li>
+                            <li>JavaScript & React</li>
+                            <li>Backend APIs</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+
+                    <button class="track-cta">Start Upskilling</button>
+                </div>
+
+                <!-- Track 2: Level 1 to Level 2/3 -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <div class="track-transition">
+                            Level 1 <span class="track-arrow">→</span> Level 2/3
+                        </div>
+                    </div>
+
+                    <div class="track-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">4 Months</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Mode</div>
+                            <div class="meta-value">Flexible</div>
+                        </div>
+                    </div>
+
+                    <div class="salary-comparison">
+                        <div class="salary-before-after">
+                            ₹18,000 <span class="track-arrow">→</span> ₹30,000+
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Skills You'll Gain:</h4>
+                        <ul>
+                            <li>Advanced System Admin</li>
+                            <li>Network Management</li>
+                            <li>Server Configuration</li>
+                            <li>Security Protocols</li>
+                        </ul>
+                    </div>
+
+                    <button class="track-cta">Start Upskilling</button>
+                </div>
+
+                <!-- Track 3: Frontend to Full Stack -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <div class="track-transition">
+                            Frontend <span class="track-arrow">→</span> Full Stack
+                        </div>
+                    </div>
+
+                    <div class="track-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">5 Months</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Mode</div>
+                            <div class="meta-value">Evening</div>
+                        </div>
+                    </div>
+
+                    <div class="salary-comparison">
+                        <div class="salary-before-after">
+                            ₹22,000 <span class="track-arrow">→</span> ₹40,000+
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Skills You'll Gain:</h4>
+                        <ul>
+                            <li>Backend Development</li>
+                            <li>Node.js & Express</li>
+                            <li>RESTful APIs</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+
+                    <button class="track-cta">Start Upskilling</button>
+                </div>
+
+                <!-- Track 4: Any Role to Cloud/DevOps -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <div class="track-transition">
+                            Any Role <span class="track-arrow">→</span> Cloud/DevOps
+                        </div>
+                    </div>
+
+                    <div class="track-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">6 Months</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Mode</div>
+                            <div class="meta-value">Online</div>
+                        </div>
+                    </div>
+
+                    <div class="salary-comparison">
+                        <div class="salary-before-after">
+                            ₹20,000 <span class="track-arrow">→</span> ₹45,000+
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Skills You'll Gain:</h4>
+                        <ul>
+                            <li>AWS/Azure/GCP</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Infrastructure as Code</li>
+                        </ul>
+                    </div>
+
+                    <button class="track-cta">Start Upskilling</button>
+                </div>
+
+                <!-- Track 5: Any Role to Cybersecurity -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <div class="track-transition">
+                            Any Role <span class="track-arrow">→</span> Cybersecurity
+                        </div>
+                    </div>
+
+                    <div class="track-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Duration</div>
+                            <div class="meta-value">5 Months</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Mode</div>
+                            <div class="meta-value">Hybrid</div>
+                        </div>
+                    </div>
+
+                    <div class="salary-comparison">
+                        <div class="salary-before-after">
+                            ₹25,000 <span class="track-arrow">→</span> ₹50,000+
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Skills You'll Gain:</h4>
+                        <ul>
+                            <li>Network Security</li>
+                            <li>Ethical Hacking</li>
+                            <li>Firewall Management</li>
+                            <li>Threat Analysis</li>
+                        </ul>
+                    </div>
+
+                    <button class="track-cta">Start Upskilling</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits of Upskilling -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Upskill Your Career?</h2>
+            <p class="section-subtitle">The advantages of advancing your IT skills</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Higher Salary</h3>
+                    <p>Increase your earning potential by 50-100% with new skills</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Better Opportunities</h3>
+                    <p>Access to more job openings and senior positions</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Career Flexibility</h3>
+                    <p>Switch domains and explore new career paths</p>
+                </div>
+
+                <!--<div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Stay Relevant</h3>
+                    <p>Keep up with evolving technology trends</p>
+                </div>-->
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚖️</div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Better roles often come with improved flexibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories-section">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real professionals who transformed their careers</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">RK</div>
+                        <div class="story-info">
+                            <h4>Rakesh Kumar</h4>
+                            <p>26 years • Bangalore</p>
+                        </div>
+                    </div>
+
+                    <div class="story-journey">
+                        <div class="journey-label">Career Journey</div>
+                        <div class="journey-path">
+                            IT Support L1 <span class="track-arrow">→</span> Full Stack Developer
+                        </div>
+                    </div>
+
+                    <div class="story-salary">
+                        <p>₹18,000/month → ₹38,000/month</p>
+                    </div>
+
+                    <p class="story-quote">"I was stuck in IT support for 2 years. Career Build's upskill program helped me transition to software development. Now I'm earning double and working on exciting projects!"</p>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">PS</div>
+                        <div class="story-info">
+                            <h4>Priya Sharma</h4>
+                            <p>28 years • Hyderabad</p>
+                        </div>
+                    </div>
+
+                    <div class="story-journey">
+                        <div class="journey-label">Career Journey</div>
+                        <div class="journey-path">
+                            Frontend Dev <span class="track-arrow">→</span> Full Stack Dev
+                        </div>
+                    </div>
+
+                    <div class="story-salary">
+                        <p>₹24,000/month → ₹42,000/month</p>
+                    </div>
+
+                    <p class="story-quote">"The weekend batches were perfect for me as a working professional. I learned backend skills while continuing my job, and got promoted within 3 months!"</p>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="story-avatar">AM</div>
+                        <div class="story-info">
+                            <h4>Amit Mehta</h4>
+                            <p>30 years • Chennai</p>
+                        </div>
+                    </div>
+
+                    <div class="story-journey">
+                        <div class="journey-label">Career Journey</div>
+                        <div class="journey-path">
+                            IT Support L2 <span class="track-arrow">→</span> Cloud Engineer
+                        </div>
+                    </div>
+
+                    <div class="story-salary">
+                        <p>₹22,000/month → ₹48,000/month</p>
+                    </div>
+
+                    <p class="story-quote">"Moving to cloud computing was the best career decision. Career Build's practical training and job support made the transition smooth and successful."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flexible Learning Options -->
+    <section class="learning-options-section">
+        <div class="container">
+            <h2 class="section-title">Flexible Learning Options</h2>
+            <p class="section-subtitle">Designed for working professionals like you</p>
+            
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">📅</div>
+                    <h3>Weekend Batches</h3>
+                    <p>Saturday & Sunday classes for full-time employees</p>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">🌙</div>
+                    <h3>Evening Classes</h3>
+                    <p>After work hours (7 PM - 10 PM) training sessions</p>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">💻</div>
+                    <h3>Online/Hybrid</h3>
+                    <p>Learn from home or office with live sessions</p>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">⏰</div>
+                    <h3>Self-Paced</h3>
+                    <p>Access recorded content anytime, anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Support -->
+    <section class="support-section">
+        <div class="container">
+            <h2 class="section-title">Complete Career Support</h2>
+            <p class="section-subtitle">We help you every step of your career transition</p>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <h3>🎯 Career Counseling</h3>
+                    <p>One-on-one guidance to plan your career path and set realistic goals</p>
+                </div>
+
+                <div class="support-card">
+                    <h3>💼 Job Switch Assistance</h3>
+                    <p>Support for transitioning to new roles with interview prep and guidance</p>
+                </div>
+
+                <div class="support-card">
+                    <h3>🤝 Internal Referrals</h3>
+                    <p>Direct referrals to our partner companies and hiring networks</p>
+                </div>
+
+                <div class="support-card">
+                    <h3>📊 Skill Gap Analysis</h3>
+                    <p>Identify what you need to learn for your target role</p>
+                </div>
+
+                <div class="support-card">
+                    <h3>📄 Resume Upgrade</h3>
+                    <p>Professional resume building to highlight your new skills</p>
+                </div>
+
+                <div class="support-card">
+                    <h3>🎤 Mock Interviews</h3>
+                    <p>Practice interviews to build confidence for real opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Form -->
+    <section class="assessment-section">
+        <div class="container">
+            <h2 class="section-title">Get Your Personalized Upskill Plan</h2>
+            <p class="section-subtitle">Tell us about yourself and we'll create a customized learning path</p>
+            
+            <div class="assessment-container">
+                <form id="upskillForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentRole">Current Role *</label>
+                        <select id="currentRole" name="currentRole" required>
+                            <option value="">Select your current role</option>
+                            <option value="it-support-l1">IT Support Level 1</option>
+                            <option value="it-support-l2">IT Support Level 2</option>
+                            <option value="it-support-l3">IT Support Level 3</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="manual-tester">Manual Tester</option>
+                            <option value="other">Other IT Role</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Years of Experience *</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select experience</option>
+                            <option value="0-1">0-1 Years</option>
+                            <option value="1-2">1-2 Years</option>
+                            <option value="2-3">2-3 Years</option>
+                            <option value="3-5">3-5 Years</option>
+                            <option value="5+">5+ Years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetRole">Target Role *</label>
+                        <select id="targetRole" name="targetRole" required>
+                            <option value="">Where do you want to reach?</option>
+                            <option value="software-dev">Software Developer</option>
+                            <option value="full-stack">Full Stack Developer</option>
+                            <option value="cloud-engineer">Cloud Engineer</option>
+                            <option value="devops">DevOps Engineer</option>
+                            <option value="cybersecurity">Cybersecurity Specialist</option>
+                            <option value="it-support-l2">IT Support Level 2</option>
+                            <option value="it-support-l3">IT Support Level 3</option>
+                            <option value="other">Other Role</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredMode">Preferred Learning Mode *</label>
+                        <select id="preferredMode" name="preferredMode" required>
+                            <option value="">Select learning mode</option>
+                            <option value="weekend">Weekend Batches</option>
+                            <option value="evening">Evening Classes</option>
+                            <option value="online">Online</option>
+                            <option value="self-paced">Self-Paced</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Information (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your career goals..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get My Personalized Plan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load external HTML files
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load ' + filePath);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    
+                    // Re-execute scripts if any (for mobile menu functionality)
+                    const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerHTML);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Load header, home page content, and footer on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadHTML('header', 'header.html');
+            loadHTML('main-content', 'home.html');
+            loadHTML('footer', 'footer.html');
+        });
+
+        // Function to load different pages
+        function loadPage(page) {
+            loadHTML('main-content', page + '.html');
+        }
+
+    
+        // Form submission
+        document.getElementById('upskillForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                currentRole: document.getElementById('currentRole').value,
+                experience: document.getElementById('experience').value,
+                targetRole: document.getElementById('targetRole').value,
+                preferredMode: document.getElementById('preferredMode').value,
+                message: document.getElementById('message').value
+            };
+            
+            console.log('Form submitted:', formData);
+            alert('Thank you! We will contact you shortly with your personalized upskill plan.');
+            this.reset();
+        });
+
+        // Track button clicks
+        document.querySelectorAll('.track-cta').forEach(button => {
+            button.addEventListener('click', function() {
+                const trackName = this.closest('.track-card').querySelector('.track-transition').textContent;
+                alert(`Interested in: ${trackName}\n\nRedirecting to detailed course page...`);
+            });
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

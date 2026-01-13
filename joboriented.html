@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Oriented Courses - Career Build IT Academy</title>
+    <style>
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        #header {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        #header:empty {
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .success-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        .metric-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Course Category Tabs */
+        .category-tabs {
+            background: #f8f8f8;
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 14px 40px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #333;
+        }
+
+        .tab-btn:hover {
+            border-color: #ff6b35;
+            color: #ff6b35;
+        }
+
+        .tab-btn.active {
+            background: #ff6b35;
+            color: white;
+            border-color: #ff6b35;
+        }
+
+        /* Experience Filter */
+        .filter-section {
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .filter-label {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #1a1a2e;
+            color: white;
+            border-color: #1a1a2e;
+        }
+
+        /* Course Cards Section */
+        .courses-section {
+            padding: 40px 0 60px;
+            background: #fff;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-color: #ff6b35;
+        }
+
+        .best-for-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .course-icon {
+            display: none;
+        }
+
+        .course-card h3 {
+            font-size: 28px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            padding: 8px 18px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .duration-badge {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .experience-badge {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .salary-range {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .salary-label {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .salary-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .course-highlights {
+            margin: 20px 0;
+        }
+
+        .course-highlights h4 {
+            font-size: 18px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .highlights-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlights-list li {
+            padding: 5px 0;
+            font-size: 16px;
+            color: #666;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlights-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 16px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Career Path Visualization */
+        .career-path-section {
+            padding: 60px 0;
+            background: #f8f8f8;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 44px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 50px;
+        }
+
+        .path-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .path-step {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            min-width: 180px;
+        }
+
+        .path-step h4 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .path-step p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .path-arrow {
+            font-size: 30px;
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        /* Job Assistance vs Guarantee */
+        .assistance-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .comparison-card h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .comparison-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-features li {
+            padding: 12px 0;
+            font-size: 18px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .comparison-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 60px 0;
+            background: #f8f8f8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .benefit-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h4 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Enquiry Form Section */
+        .enquiry-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .enquiry-section h2 {
+            font-size: 44px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .enquiry-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .enquiry-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .enquiry-btn {
+            padding: 18px 45px;
+            background: white;
+            color: #ff6b35;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .enquiry-btn:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .success-metrics {
+                gap: 30px;
+            }
+
+            .comparison-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .path-container {
+                flex-direction: column;
+            }
+
+            .path-arrow {
+                transform: rotate(90deg);
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .tabs-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Transform Your Career with Job-Oriented IT Courses</h1>
+            <p>Industry-ready training programs designed to get you hired in top IT companies</p>
+            
+            <div class="success-metrics">
+                <div class="metric-item">
+                    <div class="metric-number">95%</div>
+                    <div class="metric-label">Placement Rate</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">₹25k+</div>
+                    <div class="metric-label">Average Salary</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">500+</div>
+                    <div class="metric-label">Students Placed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Category Tabs -->
+    <section class="category-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="tab-btn active" data-category="all">All Courses</button>
+                <button class="tab-btn" data-category="software">Software Development</button>
+                <button class="tab-btn" data-category="it-support">IT Support</button>
+                <button class="tab-btn" data-category="cloud">Cloud Computing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Filter -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-label">Filter by Experience Level:</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Levels</button>
+                <button class="filter-btn" data-filter="fresher">Freshers</button>
+                <button class="filter-btn" data-filter="1-2">1-2 Years Experience</button>
+                <button class="filter-btn" data-filter="2+">2+ Years Experience</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Frontend Development -->
+                <div class="course-card" data-category="software" data-experience="fresher">
+                    <div class="best-for-badge">Best for Freshers</div>
+                    <div class="course-icon">💻</div>
+                    <h3>Frontend Development</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 3 Months</span>
+                        <span class="meta-badge experience-badge">👤 Freshers</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹16,000 - ₹20,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>HTML5, CSS3 & JavaScript</li>
+                            <li>React.js Framework</li>
+                            <li>Responsive Web Design</li>
+                            <li>Real-world Projects</li>
+                        </ul>
+                    </div>
+                    <a href="frontend.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- Full Stack Development (Exp) -->
+                <div class="course-card" data-category="software" data-experience="1-2">
+                    <div class="best-for-badge">Career Switchers</div>
+                    <div class="course-icon">⚡</div>
+                    <h3>Full Stack Development</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 6 Months</span>
+                        <span class="meta-badge experience-badge">👤 1-2 Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹20,000 - ₹25,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Frontend + Backend Development</li>
+                            <li>Node.js & Express</li>
+                            <li>Database Management</li>
+                            <li>API Development</li>
+                        </ul>
+                    </div>
+                    <a href="fullstack.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- Full Stack + Project -->
+                <div class="course-card" data-category="software" data-experience="2+">
+                    <div class="best-for-badge">Fast Track to 40k</div>
+                    <div class="course-icon">🚀</div>
+                    <h3>Full Stack + <br> Live Projects</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 8 Months</span>
+                        <span class="meta-badge experience-badge">👤 2+ Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹35,000 - ₹40,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Advanced Full Stack Development</li>
+                            <li>Live Industry Projects</li>
+                            <li>Microservices Architecture</li>
+                            <li>Cloud Deployment</li>
+                        </ul>
+                    </div>
+                    <a href="fullstack.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- Python Development -->
+                <div class="course-card" data-category="software" data-experience="fresher">
+                    <div class="best-for-badge">High Demand</div>
+                    <div class="course-icon">🐍</div>
+                    <h3>Python <br>Development</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 4 Months</span>
+                        <span class="meta-badge experience-badge">👤 Freshers</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹18,000 - ₹25,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Python Programming Fundamentals</li>
+                            <li>Django/Flask Framework</li>
+                            <li>Data Analysis & Automation</li>
+                            <li>API Development</li>
+                        </ul>
+                    </div>
+                    <a href="python.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- Java Development -->
+                <div class="course-card" data-category="software" data-experience="1-2">
+                    <div class="best-for-badge">Enterprise Ready</div>
+                    <div class="course-icon">☕</div>
+                    <h3>Java <br> Development</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 5 Months</span>
+                        <span class="meta-badge experience-badge">👤 1-2 Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹22,000 - ₹30,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Core Java & Advanced Java</li>
+                            <li>Spring Boot Framework</li>
+                            <li>Microservices Development</li>
+                            <li>Enterprise Applications</li>
+                        </ul>
+                    </div>
+                    <a href="python.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- IT Support Level 1 -->
+                <div class="course-card" data-category="it-support" data-experience="fresher">
+                    <div class="best-for-badge">Quick Start</div>
+                    <div class="course-icon">🔧</div>
+                    <h3>IT Engineer - <br>Level 1</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 1 Month</span>
+                        <span class="meta-badge experience-badge">👤 Freshers</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹16,000 - ₹20,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Computer Hardware Basics</li>
+                            <li>Windows OS Administration</li>
+                            <li>Troubleshooting Techniques</li>
+                            <li>Help Desk Operations</li>
+                        </ul>
+                    </div>
+                    <a href="level1.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- IT Support Level 2 -->
+                <div class="course-card" data-category="it-support" data-experience="1-2">
+                    <div class="best-for-badge">Level Up</div>
+                    <div class="course-icon">⚙️</div>
+                    <h3>IT Support - <br>Level 2</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 2 Months</span>
+                        <span class="meta-badge experience-badge">👤 1-2 Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹20,000 - ₹25,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Network Administration</li>
+                            <li>Active Directory Management</li>
+                            <li>Server Administration</li>
+                            <li>System Security Basics</li>
+                        </ul>
+                    </div>
+                    <a href="level2.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- IT Support Level 3 -->
+                <div class="course-card" data-category="it-support" data-experience="2+">
+                    <div class="best-for-badge">Advanced</div>
+                    <div class="course-icon">🛠️</div>
+                    <h3>IT Support - <br> Level 3</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 4 Months</span>
+                        <span class="meta-badge experience-badge">👤 2+ Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹25,000 - ₹35,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>Advanced System Administration</li>
+                            <li>Enterprise Infrastructure</li>
+                            <li>Virtualization Technologies</li>
+                            <li>IT Project Management</li>
+                        </ul>
+                    </div>
+                    <a href="level3.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- IT Support + Cloud -->
+                <div class="course-card" data-category="cloud" data-experience="fresher">
+                    <div class="best-for-badge">Cloud Ready</div>
+                    <div class="course-icon">☁️</div>
+                    <h3>IT Support L1 <br> + Cloud</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 4 Months</span>
+                        <span class="meta-badge experience-badge">👤 Freshers</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹25,000 - ₹40,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>IT Support Fundamentals</li>
+                            <li>AWS Cloud Services</li>
+                            <li>Cloud Infrastructure Management</li>
+                            <li>Cloud Survey & Migration</li>
+                        </ul>
+                    </div>
+                    <a href="cloudcomputing.html"><button class="cta-button">Learn More</button></a>
+                </div>
+
+                <!-- IT Support + Cybersecurity -->
+                <div class="course-card" data-category="cloud" data-experience="1-2">
+                    <div class="best-for-badge">Security Focused</div>
+                    <div class="course-icon">🔒</div>
+                    <h3>IT Support L2 <br>+ Cybersecurity</h3>
+                    <div class="course-meta">
+                        <span class="meta-badge duration-badge">⏱ 4 Months</span>
+                        <span class="meta-badge experience-badge">👤 1-2 Yrs Exp</span>
+                    </div>
+                    <div class="salary-range">
+                        <div class="salary-label">Expected Salary Range</div>
+                        <div class="salary-value">₹25,000 - ₹40,000/month</div>
+                    </div>
+                    <div class="course-highlights">
+                        <h4>What You'll Learn:</h4>
+                        <ul class="highlights-list">
+                            <li>IT Support Level 2 Skills</li>
+                            <li>Network Security Fundamentals</li>
+                            <li>Firewall Configuration</li>
+                            <li>Security Operations</li>
+                        </ul>
+                    </div>
+                    <a href="cybersecurity.html"><button class="cta-button">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Career Path Visualization -->
+    <section class="career-path-section">
+        <div class="container">
+            <h2 class="section-title">Your IT Career Progression</h2>
+            <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 30px;">
+                Start as a fresher and grow to advanced roles with our structured learning paths
+            </p>
+            
+            <div class="path-container">
+                <div class="path-step">
+                    <h4>Fresher</h4>
+                    <p>Level 1</p>
+                    <p style="font-weight: 600; color: #ff6b35;">1 Month</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <h4>Junior</h4>
+                    <p>Level 2</p>
+                    <p style="font-weight: 600; color: #ff6b35;">2 Months</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <h4>Intermediate</h4>
+                    <p>Level 3</p>
+                    <p style="font-weight: 600; color: #ff6b35;">4 Months</p>
+                </div>
+                <div class="path-arrow">→</div>
+                <div class="path-step">
+                    <h4>Advanced</h4>
+                    <p>Senior Roles</p>
+                    <p style="font-weight: 600; color: #ff6b35;">8+ Months</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Assistance vs Job Guarantee -->
+    <section class="assistance-section">
+        <div class="container">
+            <h2 class="section-title">Career Support Options</h2>
+            <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 20px;">
+                Choose the support model that works best for your career goals
+            </p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>🤝 Job Assistance</h3>
+                    <ul class="comparison-features">
+                        <li>Complete Training Program</li>
+                        <li>Resume Building & Optimization</li>
+                        <li>Interview Preparation</li>
+                        <li>Job Referrals to Partner Companies</li>
+                        <li>Career Guidance Sessions</li>
+                        <li>LinkedIn Profile Optimization</li>
+                        <li>Mock Interviews</li>
+                        <li>Placement Support for 6 Months</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>💼 Job Guarantee</h3>
+                    <ul class="comparison-features">
+                        <li>Everything in Job Assistance</li>
+                        <li>Guaranteed Job Placement</li>
+                        <li>Minimum Salary Commitment</li>
+                        <li>Extended Support Until Placement</li>
+                        <li>Direct Company Interviews</li>
+                        <li>Unlimited Interview Opportunities</li>
+                        <li>Dedicated Placement Manager</li>
+                        <li>Post-Placement Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose These Courses -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Job-Oriented Courses</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h4>Industry-Aligned Curriculum</h4>
+                    <p>Course content designed based on current job market demands and industry requirements</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h4>Practical Training</h4>
+                    <p>Hands-on projects and real-world scenarios to build job-ready skills</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍💻</div>
+                    <h4>Expert Instructors</h4>
+                    <p>Learn from industry professionals with years of practical experience</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Fast Track Programs</h4>
+                    <p>Accelerated learning paths to get you job-ready in minimum time</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h4>Placement Support</h4>
+                    <p>Dedicated career services team to help you land your dream job</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Career Growth Path</h4>
+                    <p>Clear progression from entry-level to advanced roles with structured learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="enquiry-section">
+        <div class="container">
+            <h2>Ready to Start Your IT Career Journey?</h2>
+            <p>Get personalized course recommendations and career guidance from our experts</p>
+            
+            <div class="enquiry-buttons">
+                <a href="#" class="enquiry-btn">Book Free Demo Class</a>
+                <a href="#" class="enquiry-btn">Talk to Career Advisor</a>
+                <a href="#" class="enquiry-btn">Download Course Brochure</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load external HTML files
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load ' + filePath);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                    
+                    // Re-execute scripts if any (for mobile menu functionality)
+                    const scripts = document.getElementById(elementId).getElementsByTagName('script');
+                    for (let i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerHTML);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Load header, home page content, and footer on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadHTML('header', 'header.html');
+            loadHTML('main-content', 'home.html');
+            loadHTML('footer', 'footer.html');
+        });
+
+        // Function to load different pages
+        function loadPage(page) {
+            loadHTML('main-content', page + '.html');
+        }
+
+   
+        // Tab filtering functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                
+                courseCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Experience filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                courseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.experience === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // CTA button actions
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const courseName = this.closest('.course-card').querySelector('h3').textContent;
+                alert(`Interested in ${courseName}? Redirecting to course details...`);
+                // In real implementation, this would navigate to course detail page
+            });
+        });
+    </script>
+</body>
+</html>

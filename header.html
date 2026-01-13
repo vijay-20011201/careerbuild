@@ -11,46 +11,11 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f5f5f5;
-        }
-
-        /* Top Utility Bar */
-        .top-bar {
-            background: #f8f8f8;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 6px 0;
-            font-size: 13px;
-            margin: 0;
-        }
-
-        .top-bar-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-bar-left, .top-bar-right {
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-
-        .top-bar a {
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.3s;
-        }
-
-        .top-bar a:hover {
-            color: #ff6b35;
         }
 
         /* Main Header */
@@ -61,40 +26,30 @@
             top: 0;
             z-index: 1000;
             margin: 0;
-            padding: 1px;
+            padding: 0;
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            border-radius: 8px;
+        .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            position: relative;
+            text-decoration: none;
+            line-height: 0;
         }
-        .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
 
-.logo-img {
-    height: 100px;      /* adjust if needed */
-    width: auto;
-    display: block;
-}
-
+        .logo-img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
 
         /* Navigation */
         nav {
@@ -160,8 +115,8 @@
             border-radius: 8px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             padding: 25px;
-            margin-top: 0;
-            min-width: 600px;
+            margin-top: 10px;
+            min-width: 240px;
             z-index: 100;
         }
 
@@ -171,141 +126,19 @@
             animation: fadeIn 0.3s;
         }
 
-        
-
-        /* Mega Menu Columns - Card Style */
-        .mega-menu {
-            display: grid;
-            grid-template-columns: repeat(4, max-content);
-            gap: 15px;
-            justify-content: center;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-20%) translateY(-10px); }
+            to { opacity: 1; transform: translateX(-20%) translateY(0); }
         }
 
-        .menu-column {
-            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid #e8e8e8;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .menu-column::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-column:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
-            border-color: #ff6b35;
-        }
-
-        .menu-column:hover::before {
-            transform: scaleX(1);
-        }
-
-        .menu-column h4 {
-            color: #1a1a1a;
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #ff6b35;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        .menu-column h4::before {
-            content: '▸';
-            color: #ff6b35;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .menu-column ul {
-            list-style: none;
-        }
-
-        .menu-column li {
-            margin-bottom: 8px;
-        }
-
-        .menu-column a {
-            color: #555;
-            text-decoration: none;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: all 0.3s;
-            position: relative;
-            background: transparent;
-            white-space: nowrap;
-        }
-
-        .menu-column a::before {
-            content: '→';
-            color: #ff6b35;
-            position: absolute;
-            left: 12px;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-
-        .menu-column a:hover {
-            background: rgba(255, 107, 53, 0.1);
-            color: #ff6b35;
-            padding-left: 28px;
-            transform: translateX(3px);
-        }
-
-        .menu-column a:hover::before {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Level Badges */
-        .level-section {
-            margin-top: 12px;
-        }
-
-        .level-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 10px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
-        }
-
-        /* Simple Dropdown - Card Style */
+        /* Simple Dropdown */
         .simple-dropdown {
             min-width: 240px;
             padding: 10px;
             background: white;
         }
 
-        .simple-dropdown > a,
-        .simple-dropdown > .nested-item > a {
+        .simple-dropdown > a {
             display: block;
             padding: 12px 16px;
             color: #555;
@@ -320,8 +153,7 @@
             white-space: nowrap;
         }
 
-        .simple-dropdown > a::before,
-        .simple-dropdown > .nested-item > a::before {
+        .simple-dropdown > a::before {
             content: '→';
             color: #ff6b35;
             position: absolute;
@@ -332,8 +164,7 @@
             font-weight: bold;
         }
 
-        .simple-dropdown > a:hover,
-        .simple-dropdown > .nested-item > a:hover {
+        .simple-dropdown > a:hover {
             background: rgba(255, 107, 53, 0.1);
             color: #ff6b35;
             padding-left: 32px;
@@ -342,142 +173,70 @@
             border-color: #ff6b35;
         }
 
-        .simple-dropdown > a:hover::before,
-        .simple-dropdown > .nested-item > a:hover::before {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Nested Dropdown for Services - Card Style */
-        .nested-item {
-            position: relative;
-        }
-
-        .nested-item > a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nested-item > a::after {
-            content: '›';
-            font-size: 16px;
-            opacity: 0.6;
-            margin-left: auto;
-        }
-
-        .nested-dropdown {
-            display: none;
-            position: absolute;
-            left: 100%;
-            top: 0;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            min-width: 200px;
-            padding: 10px;
-            margin-left: 5px;
-        }
-
-        .nested-item:hover .nested-dropdown,
-        .nested-dropdown:hover {
-            display: block;
-        }
-
-        .nested-dropdown a {
-            display: block;
-            padding: 12px 16px;
-            color: #555;
-            text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s;
-            border-radius: 8px;
-            margin-bottom: 6px;
-            position: relative;
-            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            border: 1px solid #e8e8e8;
-            white-space: nowrap;
-        }
-
-        .nested-dropdown a::before {
-            content: '→';
-            color: #ff6b35;
-            position: absolute;
-            left: 16px;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-
-        .nested-dropdown a:hover {
-            background: rgba(255, 107, 53, 0.1);
-            color: #ff6b35;
-            padding-left: 32px;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
-            border-color: #ff6b35;
-        }
-
-        .nested-dropdown a:hover::before {
+        .simple-dropdown > a:hover::before {
             opacity: 1;
             transform: translateX(0);
         }
 
         /* CTA Buttons */
         .cta-buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
 
-.btn {
-    min-width: 140px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 26px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    box-sizing: border-box;
-}
+        .btn {
+            min-width: 140px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+            border: 2px solid #ff6b35;
+        }
 
         .btn-primary:hover {
-    background-color: #e85c2a;
-    border-color: #e85c2a;
-}
-        .btn-primary:hover {
-            background: #e55a2b;
+            background-color: #e85c2a;
+            border-color: #e85c2a;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
         }
 
-        .btn-secondary {
-            background: white;
-            color: #ff6b35;
-            border: 2px solid #ff6b35;
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            text-decoration: none;
+            z-index: 9999;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
         }
 
-        .btn-secondary:hover {
-            background: #ff6b35;
-            color: white;
-            transform: translateY(-2px);
+        .whatsapp-float:hover {
+            background: #20ba5a;
+            transform: scale(1.08);
         }
-        /* Outline Button */
-.btn-outline {
-    background-color: transparent;
-    color: #ff6b35;
-    border: 2px solid #ff6b35;
-}
-
-.btn-outline:hover {
-    background-color: #ff6b35;
-    color: #fff;
-}
 
         /* Mobile Menu */
         .mobile-toggle {
@@ -491,12 +250,12 @@
 
         /* Responsive */
         @media (max-width: 968px) {
-            .top-bar {
-                display: none;
+            .header-content {
+                padding: 10px 20px;
             }
 
-            .header-content {
-                padding: 15px 20px;
+            .logo-img {
+                height: 60px;
             }
 
             nav {
@@ -540,23 +299,6 @@
                 display: block;
             }
 
-            .mega-menu {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .nested-dropdown {
-                position: static;
-                display: none;
-                box-shadow: none;
-                padding: 0 0 0 20px;
-                margin: 0;
-            }
-
-            .nested-item.active .nested-dropdown {
-                display: block;
-            }
-
             .mobile-toggle {
                 display: block;
             }
@@ -576,60 +318,38 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 15px;
+                right: 15px;
+            }
         }
-        /* Floating WhatsApp Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-    background: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    text-decoration: none;
-    z-index: 9999;
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    background: #20ba5a;
-    transform: scale(1.08);
-}
-
-/* Mobile friendly spacing */
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
     </style>
 </head>
 <body>
-    <!-- Top Utility Bar -->
+    <!-- Top Utility Bar 
     <div class="top-bar">
         <div class="top-bar-content">
             <div class="top-bar-left">
                 <a href="tel:+919008129489">📞 +91 9008129489</a>
-                <a href="mailto:info@careerbuild.in">✉️ info@careerbuild.in /</a><a href="mailto:hr@careerbuild.in">hr@careerbuild.in</a>
+                <a href="mailto:info@careerbuild.in">✉️ info@careerbuild.in </a>
             </div>
             <div class="top-bar-right">
                 <span style="color: #ff6b35; font-weight: 600;">Online | Offline Training</span>
-                <a href="https://wa.me/919008129489?text=Hi%20I%20am%20interested%20in%20a%20free%20demo" class="social-icon whatsapp" title="WhatsApp" target="_blank">💬</a>
+                <a href="https://wa.me/919008129489?text=Hi%20I%20am%20interested%20in%20a%20free%20demo"
+   class="social-icon whatsapp"
+   target="_blank"
+   title="WhatsApp">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
                 <a href="demoform.html">Free Demo</a>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!-- Main Header -->
     <header class="main-header">
@@ -642,8 +362,9 @@
 
             <nav id="mainNav">
                 <a href="index.html">Home</a>
+                <a href="joboriented.html">Job-Oriented</a>
                 
-                <!-- Courses Dropdown -->
+                <!-- Courses Dropdown 
                 <div class="dropdown">
                     <a href="#">Courses</a>
                     <div class="dropdown-content">
@@ -694,14 +415,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
-                <!-- Services Dropdown -->
+                <!-- Services Dropdown 
                 
-                    <a href="services.html">Services</a>
+                    <a href="services.html">Services</a>-->
                
 
-                <!-- Training Modes Dropdown -->
+                <!-- Training Modes Dropdown 
                 <div class="dropdown">
                     <a href="#">Training Modes</a>
                     <div class="dropdown-content simple-dropdown">
@@ -710,18 +431,20 @@
                         <a href="weekend.html">Weekend Batches</a>
                         <a href="fasttrack.html">Fast-Track Courses</a>
                     </div>
-                </div>
+                </div>-->
 
-                <!-- Careers & Jobs Dropdown -->
+                <!-- Careers & Jobs Dropdown 
                 <div class="dropdown">
                     <a href="#">Careers & Jobs</a>
                     <div class="dropdown-content simple-dropdown">
                         <a href="internship.html">Internship Programs</a>
                         <a href="currentopenings.html">Current Openings</a>
                     </div>
-                </div>
+                </div>-->
+                <a href="upskill.html">Upskill</a>
+                <a href="career.html">Careers</a>
 
-                <a href="aboutus.html">About Us</a>
+                <!--<a href="aboutus.html">About Us</a>-->
                 <a href="contact.html">Contact</a>
 
                 <div class="cta-buttons">
